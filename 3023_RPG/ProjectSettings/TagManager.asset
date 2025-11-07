@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Hero
+  - BattleText
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Ground
+    uniqueID: 1523146979
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: OnGround
+    uniqueID: 4180235161
+    locked: 0
+  - name: AboveGround
+    uniqueID: 1556994909
+    locked: 0
+  - name: Sky
+    uniqueID: 4011860633
+    locked: 0
+  m_RenderingLayers:
+  - Default
