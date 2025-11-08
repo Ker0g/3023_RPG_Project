@@ -1,0 +1,1 @@
+Some scripts used are based off of scripts and practices shown in Mr. Kaiser's Turn Based RPG in Unity series
