@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8135583109fcc1147ba962500f45d27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemPopup: {fileID: 7990216470750962393, guid: 3068ea8672e6bf14886c2526c5c4b04c, type: 3}
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   item: {fileID: 0}
   itemImage: {fileID: 0}

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour
 {
+   public ItemPopupScript itemPopup;
+
     [SerializeField] InputActionAsset inputActions;
 
     public ScriptableItem item = null;
@@ -26,6 +28,7 @@ public class ItemPickup : MonoBehaviour
 
     private void Start()
     {
+        //itemPopup = FindObjectOfType<ItemPopupScript>();
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.sprite = item.icon;
 
@@ -39,6 +42,11 @@ public class ItemPickup : MonoBehaviour
         {
             if (grab.IsPressed())
             {
+                itemPopup.gameObject.SetActive(true);
+                itemPopup.itemToPop = item;
+                itemPopup.PopUp();
+
+
                 Debug.Log(item.description);
                 Destroy(gameObject);
             }
