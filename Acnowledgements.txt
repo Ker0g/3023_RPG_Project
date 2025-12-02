@@ -1,1 +1,3 @@
 Some scripts used are based off of scripts and practices shown in Mr. Kaiser's Turn Based RPG in Unity series
+Some scripts used are based off of scripts and practices shown in Codegnat Studio's Unity Achievement System
+Some Menus used are based off of scripts and practices shown in inScope Studios's UNITY: Creating an achievement system series
