@@ -6,6 +6,8 @@ public class LocationTracker : MonoBehaviour
 
     public string PlayerLocation { get; private set; }
 
+    public int StepsTaken { get; private set; }
+
     private void Awake()
     {
 
@@ -22,5 +24,10 @@ public class LocationTracker : MonoBehaviour
     public void ChangeLocation(string location)
     {
         PlayerLocation = location;
+    }
+
+    public void Step()
+    {
+        StepsTaken++;
     }
 }

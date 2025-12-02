@@ -6,7 +6,7 @@ public class Menu_Buttons : MonoBehaviour
 
     [SerializeField] Button newGameButton;
     [SerializeField] Button continueGameButton;
-
+    [SerializeField] GameObject achievementMenu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +23,12 @@ public class Menu_Buttons : MonoBehaviour
 
     void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HubScene");
+    }
+
+    void AchievementMenu()
+    {
+        achievementMenu.SetActive(true);
+
     }
 }
