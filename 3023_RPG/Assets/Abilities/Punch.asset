@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: 1
   effects:
-  - {fileID: 11400000, guid: b34d1b57c7899c944a5e9c01a6a50be1, type: 2}
+  - {fileID: 11400000, guid: 60fad066fcf999f43bd5233e3e6b350f, type: 2}
   manaCost: 0

@@ -18,19 +18,19 @@ public class EffectPoison : Effect
     }
 }
 
-[CreateAssetMenu(fileName = "New Damage Effect", menuName = "Ability/Damage")]
-public class EffectDamage : Effect
-{
-    public int minDamage;
-    public int maxDamageExclusive;
-    public int damageAmount;
-    public override void Activate(FighterStats user, FighterStats target)
-    {
-        damageAmount = Random.Range(minDamage, maxDamageExclusive);
-        damageAmount += Mathf.RoundToInt(user.attack * 0.1f);
+//[CreateAssetMenu(fileName = "New Damage Effect", menuName = "Ability/Damage")]
+//public class EffectDamage : Effect
+//{
+//    public int minDamage;
+//    public int maxDamageExclusive;
+//    public int damageAmount;
+//    public override void Activate(FighterStats user, FighterStats target)
+//    {
+//        damageAmount = Random.Range(minDamage, maxDamageExclusive);
+//        damageAmount += Mathf.RoundToInt(user.attack * 0.1f);
 
-        damageAmount -= target.defense;
-        target.recieveDamage(damageAmount);
-        //target.TakeDamage(damageAmount);
-    }
-}
+//        damageAmount -= target.defense;
+//        target.recieveDamage(damageAmount);
+//        //target.TakeDamage(damageAmount);
+//    }
+//}

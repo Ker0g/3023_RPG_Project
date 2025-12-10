@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
@@ -37,8 +38,9 @@ public class FighterAction : MonoBehaviour
 
         typer = GameObject.FindGameObjectWithTag("BattleText").GetComponent<TextTyper>();
     }
-    private void Start()
+    private async void Start()
     {
+        await Task.Delay(10);
         hero = GameObject.FindGameObjectWithTag("Hero");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: b0084c205e9c7564fa91a725f1674ecc, type: 3}
   m_Name: 1d4
-  m_EditorClassIdentifier: Assembly-CSharp::EffectDamage
+  m_EditorClassIdentifier: 
   minDamage: 1
-  maxDamageExclusive: 5
-  damageAmount: 0
+  maxDamage: 4
+  damageAmount: 3
