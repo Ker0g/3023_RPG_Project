@@ -8,6 +8,8 @@ public class FighterStats : MonoBehaviour
     [SerializeField] GameObject healthFill;
     [SerializeField] GameObject magicFill;
 
+    
+
     [Header("Fighter Stats")]
     public int health;
     public int magic;
@@ -16,9 +18,9 @@ public class FighterStats : MonoBehaviour
     public float speed;
     public float mana;
 
-    private float maxHealth;
-    private float maxMagic;
-    private float maxMana;
+    public float maxHealth;
+    public float maxMagic;
+    public float maxMana;
 
     private float startHealth;
     private float startMagic;
@@ -46,7 +48,7 @@ public class FighterStats : MonoBehaviour
         //}
         //else
         //{
-        //    animatorController.Play("Fighter_Hurt");
+        animatorController.Play("Hurt");
         //}
     }
 
@@ -60,6 +62,9 @@ public class FighterStats : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animatorController = gameObject.GetComponent<Animator>();
+
+
         healthTransform = healthFill.GetComponent<RectTransform>();
         healthScale = healthFill.transform.localScale;
 

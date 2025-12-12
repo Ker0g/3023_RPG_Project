@@ -10,6 +10,7 @@ public class MakeButton : MonoBehaviour
     private bool physical;
 
     private GameObject hero;
+    private GameObject enemy;
     void Start()
     {
         string temp = gameObject.name;

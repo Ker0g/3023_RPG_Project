@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
+using UnityEditor.Playables;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class FighterAction : MonoBehaviour
 {
+    public CombatSystem ai;
+
     private GameObject hero;
     private GameObject enemy;
 
@@ -43,6 +47,7 @@ public class FighterAction : MonoBehaviour
         await Task.Delay(10);
         hero = GameObject.FindGameObjectWithTag("Hero");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
+        ai = FindObjectOfType<CombatSystem>();
     }
     public void SelectAttack(string btn)
     {
@@ -50,6 +55,7 @@ public class FighterAction : MonoBehaviour
         GameObject attacker = enemy;
         attackerStats = attacker.GetComponent<FighterStats>();
         defenderStats = victim.GetComponent<FighterStats>();
+
         if (tag == "Hero")
         {
             victim = enemy;
@@ -57,10 +63,25 @@ public class FighterAction : MonoBehaviour
             attackerStats = hero.GetComponent<FighterStats>();
             defenderStats = enemy.GetComponent<FighterStats>();
         }
+        else if(tag == "Enemy")
+        {
+            victim = hero;
+            attacker = enemy;
+            attackerStats = enemy.GetComponent<FighterStats>();
+            defenderStats = hero.GetComponent<FighterStats>();
+        }
+
         if (btn.CompareTo("melee") == 0)
         {
             PerformAbility(abilities[0], attackerStats, defenderStats);
             Debug.Log("Melee Attack");
+
+            if (attacker == hero)
+            {
+                ai.TestAttack();
+            }
+
+
 
         }
         else if (btn.CompareTo("range") == 0)
@@ -68,6 +89,11 @@ public class FighterAction : MonoBehaviour
             PerformAbility(abilities[1], attackerStats, defenderStats);
 
             Debug.Log("Range Attack");
+        }
+        else if(btn.CompareTo("charge") == 0)
+        {
+            ChargeMana(attackerStats);
+            
         }
         else
         {
@@ -86,5 +112,25 @@ public class FighterAction : MonoBehaviour
         user.mana -= ability.manaCost;
         ability.Activate(user, target);
         typer.TypeText($"{user.name} uses {ability.name} on {target.name}!");
+    }
+
+    public void ChargeMana(FighterStats user)
+    {   
+        int addMana = (int)(user.mana * 0.25);
+
+        if (user.mana < user.maxMana)
+        {
+
+            user.mana += addMana;
+
+            user.updateManaFill(-addMana);
+
+            typer.TypeText($"{user.name} recharges {addMana} mana!");
+        }
+        else { typer.TypeText($"{user.name} charged mana, but was already full!");  }
+            Mathf.Clamp(user.mana, 0, user.maxMana);
+
+        
+        
     }
 }
