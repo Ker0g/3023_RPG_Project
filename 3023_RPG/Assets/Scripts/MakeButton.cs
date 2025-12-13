@@ -28,9 +28,9 @@ public class MakeButton : MonoBehaviour
         {
             hero.GetComponent<FighterAction>().SelectAttack("range");
         }
-        else
+        else if (btn.CompareTo("Charge") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("run");
+            hero.GetComponent<FighterAction>().SelectAttack("charge");
         }
     }
 }

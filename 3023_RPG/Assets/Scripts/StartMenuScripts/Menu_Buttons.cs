@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Menu_Buttons : MonoBehaviour
@@ -6,13 +7,15 @@ public class Menu_Buttons : MonoBehaviour
 
     [SerializeField] Button newGameButton;
     [SerializeField] Button continueGameButton;
-    [SerializeField] GameObject achievementMenu;
+    //[SerializeField] Button howToPlayMenu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         newGameButton.onClick.AddListener(StartGame);
         continueGameButton.onClick.AddListener(StartGame);
+        //howToPlayMenu.onClick.AddListener(OpenInstructions);
+        
     }
 
         // Update is called once per frame
@@ -26,9 +29,13 @@ public class Menu_Buttons : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("HubScene");
     }
 
-    void AchievementMenu()
+    void OpenInstructions()
     {
-        achievementMenu.SetActive(true);
-
+        SceneManager.LoadScene("InstructionsScene");
     }
+    //void AchievementMenu()
+    //{
+    //    achievementMenu.SetActive(true);
+
+    //}
 }

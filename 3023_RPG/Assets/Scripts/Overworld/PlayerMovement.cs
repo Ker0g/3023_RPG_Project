@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     public float stepTimer = 0.25f;
 
+    Animator animator;
+
     InputAction moveAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = movement.FindAction("Move");
+        animator = GetComponent<Animator>();
         transform.position = LocationTracker.Instance.PlaceInScene;
     }
 
@@ -42,9 +45,38 @@ public class PlayerMovement : MonoBehaviour
             if(stepTimer <= 0)
             {
                 LocationTracker.Instance.Step();
+                if(LocationTracker.Instance.PlayerLocation == "Hub" || LocationTracker.Instance.PlayerLocation == "Cave")
+                {
+                    SoundManager.PlaySound("hub step");
+                }
+                else {SoundManager.PlaySound("grass step"); }
+                    
                 stepTimer = 0.25f;
                 Debug.Log(LocationTracker.Instance.StepsTaken);
             }
+        }
+
+        if (direction.x > 0)
+        {
+            animator.SetInteger("State", 4);
+        }
+        else if (direction.x < 0)
+        {
+            animator.SetInteger("State", 3);
+        }
+        else if (direction.y > 0)
+        {
+            animator.SetInteger("State", 1);
+        }
+        else if (direction.y < 0)
+        {
+            animator.SetInteger("State", 2);
+        }
+        else { animator.SetInteger("State", 0); }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GoldManager.instance.AddGold(5000);
         }
     }
 }

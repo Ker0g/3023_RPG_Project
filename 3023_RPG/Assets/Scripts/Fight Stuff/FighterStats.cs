@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class FighterStats : MonoBehaviour
 {
+
+
     [SerializeField] Animator animatorController;
 
     [SerializeField] GameObject healthFill;
@@ -24,7 +26,7 @@ public class FighterStats : MonoBehaviour
     public float maxMana;
 
     private float startHealth;
-    private float startMagic;
+    private float startMana;
 
     public int nextActTurn;
 
@@ -37,6 +39,8 @@ public class FighterStats : MonoBehaviour
     private float xNewHealthScale;
     private float xNewMagicScale;
 
+    public int reward = 0;
+
     public void recieveDamage(int damage)
     {
         health -= damage;
@@ -45,6 +49,7 @@ public class FighterStats : MonoBehaviour
 
         if (health <= 0)
         {
+            GoldManager.instance.AddGold(reward);
             //animatorController.Play("Fighter_Death");
             SceneManager.LoadScene(LocationTracker.Instance.LocationIndex);
         }
@@ -56,7 +61,7 @@ public class FighterStats : MonoBehaviour
 
     public void updateManaFill(float manaCost)
     {
-        xNewMagicScale = ((magic - manaCost) / startMagic) * magicScale.x;
+        xNewMagicScale = ((mana - manaCost) / startMana) * magicScale.x;
         magicFill.transform.localScale = new Vector2(xNewMagicScale, magicScale.y);
     }
 
@@ -73,7 +78,9 @@ public class FighterStats : MonoBehaviour
         magicTransform = magicFill.GetComponent<RectTransform>();
         magicScale = magicFill.transform.localScale;
         startHealth = health;
-        startMagic = magic;
+        startMana = mana;
+        maxHealth = health;
+        maxMana = mana;
     }
 
     // Update is called once per frame

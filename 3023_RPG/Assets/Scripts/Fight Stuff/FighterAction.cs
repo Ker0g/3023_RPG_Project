@@ -1,3 +1,4 @@
+using NUnit.Framework.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -51,6 +52,8 @@ public class FighterAction : MonoBehaviour
     }
     public void SelectAttack(string btn)
     {
+        if (tag == "Hero" && ai.heroTurn != true)
+            return;
         GameObject victim = hero;
         GameObject attacker = enemy;
         attackerStats = attacker.GetComponent<FighterStats>();
@@ -93,11 +96,29 @@ public class FighterAction : MonoBehaviour
             PerformAbility(abilities[1], attackerStats, defenderStats);
 
             Debug.Log("Range Attack");
+
+            if (attacker == hero)
+            {
+                if (defenderStats != null)
+                {
+                    ai.TestAttack();
+                }
+
+            }
         }
         else if(btn.CompareTo("charge") == 0)
         {
             ChargeMana(attackerStats);
-            
+
+            if (attacker == hero)
+            {
+                if (defenderStats != null)
+                {
+                    ai.TestAttack();
+                }
+
+            }
+
         }
         else
         {
@@ -114,6 +135,7 @@ public class FighterAction : MonoBehaviour
         }
 
         user.mana -= ability.manaCost;
+        user.updateManaFill(ability.manaCost);
         ability.Activate(user, target);
         typer.TypeText($"{user.name} uses {ability.name} on {target.name}!");
     }

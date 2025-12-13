@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shambler Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: reward
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104086385892558591, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: 'abilities.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6402b8affa7e6104084bffbe6e2b3d3c, type: 2}
     - target: {fileID: 4807483924908997475, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
       propertyPath: m_Color.b
       value: 0

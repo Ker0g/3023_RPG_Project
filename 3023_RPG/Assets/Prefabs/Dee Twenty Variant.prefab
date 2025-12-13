@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: reward
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 4807483924908997475, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
       propertyPath: m_Color.b
       value: 0.7846762

@@ -21,6 +21,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: reward
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
       propertyPath: defense
       value: 2
       objectReference: {fileID: 0}

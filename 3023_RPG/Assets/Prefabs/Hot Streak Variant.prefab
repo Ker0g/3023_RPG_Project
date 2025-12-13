@@ -21,9 +21,17 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: reward
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919493500823055182, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
       propertyPath: defense
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4104086385892558591, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
+      propertyPath: 'abilities.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 386d85b968b07bb40a5e01ec348cd3b0, type: 2}
     - target: {fileID: 4807483924908997475, guid: 5e3cbede4ea509a4bb1ae4d54f69da9f, type: 3}
       propertyPath: m_Color.b
       value: 0.514151
