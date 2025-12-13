@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         moveAction = movement.FindAction("Move");
+        transform.position = LocationTracker.Instance.PlaceInScene;
     }
 
     // Update is called once per frame

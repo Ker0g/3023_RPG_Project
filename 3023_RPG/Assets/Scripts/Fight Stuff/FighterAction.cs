@@ -78,7 +78,11 @@ public class FighterAction : MonoBehaviour
 
             if (attacker == hero)
             {
-                ai.TestAttack();
+                if (defenderStats != null) 
+                {
+                    ai.TestAttack();
+                }
+                
             }
 
 

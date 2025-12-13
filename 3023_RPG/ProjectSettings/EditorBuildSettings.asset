@@ -6,17 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/HubScene.unity
+    guid: 91f1d0cc378510a42b341668ec4c9596
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 37e971ba7cc1ee545b868477e4bbe7c6
   - enabled: 1
-    path: Assets/Scenes/HubScene.unity
-    guid: 91f1d0cc378510a42b341668ec4c9596
-  - enabled: 1
     path: Assets/Scenes/FieldScene.unity
     guid: 16287844be7364443b63058d8f777a8b
+  - enabled: 1
+    path: Assets/Scenes/LakeScene.unity
+    guid: 1027927409ee501478d5193359fd7235
+  - enabled: 1
+    path: Assets/Scenes/CaveScene.unity
+    guid: 6337a88f353ccc2488bf2b2f2565f586
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

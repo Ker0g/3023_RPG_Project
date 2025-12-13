@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FighterStats : MonoBehaviour
 {
@@ -42,10 +43,11 @@ public class FighterStats : MonoBehaviour
         xNewHealthScale = (health / startHealth) * healthScale.x;
         healthFill.transform.localScale = new Vector2(xNewHealthScale, healthScale.y);
 
-        //if (health <= 0)
-        //{
-        //    animatorController.Play("Fighter_Death");
-        //}
+        if (health <= 0)
+        {
+            //animatorController.Play("Fighter_Death");
+            SceneManager.LoadScene(LocationTracker.Instance.LocationIndex);
+        }
         //else
         //{
         animatorController.Play("Hurt");

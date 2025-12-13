@@ -24,8 +24,13 @@ public class CombatSystem : MonoBehaviour
 
         int randChoice = Random.Range(0, attacks.Length);
         Debug.Log(randChoice);
-
-        enemy.GetComponent<FighterAction>().SelectAttack(attacks[randChoice]);
+        if(enemy != null)
+        {
+            enemy.GetComponent<FighterAction>().SelectAttack(attacks[randChoice]);
+        }
+        
+        
+        
         Debug.Log("I'd be punchin rn");
     }
 }

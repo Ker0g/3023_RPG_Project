@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Teleporter : MonoBehaviour
 {
-
+    
     [SerializeField] InputActionAsset inputActions;
     InputAction interact;
     public string destination;
@@ -16,6 +16,15 @@ public class Teleporter : MonoBehaviour
             canInteract = true;
         }
         else
+        {
+            canInteract = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hero"))
+        if (canInteract)
         {
             canInteract = false;
         }
@@ -33,6 +42,7 @@ public class Teleporter : MonoBehaviour
         {
             if(interact.IsPressed())
             {
+                LocationTracker.Instance.SavePlaceInScene(Vector2.zero);
                 UnityEngine.SceneManagement.SceneManager.LoadScene(destination);
             }
         }

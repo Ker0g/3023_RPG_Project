@@ -6,6 +6,10 @@ public class LocationTracker : MonoBehaviour
 
     public string PlayerLocation { get; private set; }
 
+    public int LocationIndex { get; private set; }
+
+    public Vector2 PlaceInScene { get; private set; } = Vector2.zero;
+
     public int StepsTaken { get; private set; }
 
     private void Awake()
@@ -29,5 +33,15 @@ public class LocationTracker : MonoBehaviour
     public void Step()
     {
         StepsTaken++;
+    }
+
+    public void SavePlaceInScene(Vector2 place)
+    {
+        PlaceInScene = place;
+    }
+
+    public void SaveLocationIndex(int index)
+    {
+        LocationIndex = index;
     }
 }

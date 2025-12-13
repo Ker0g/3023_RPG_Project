@@ -38,6 +38,7 @@ public class Encounterer : MonoBehaviour
                 if (encounterClock <= 0)
                 {
                     Debug.Log("freak.");
+                    LocationTracker.Instance.SavePlaceInScene(collision.transform.position);
                     SceneManager.LoadScene("BattleScene");
 
                 }

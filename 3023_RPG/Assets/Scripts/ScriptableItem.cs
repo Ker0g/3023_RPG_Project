@@ -6,6 +6,8 @@ public class ScriptableItem : ScriptableObject
 
     public Sprite icon;
 
+    public int worth;
+
     public string description = "";
 
 }

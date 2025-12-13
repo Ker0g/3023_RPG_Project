@@ -4,6 +4,7 @@ public class EncounterDecider : MonoBehaviour
 {
     [SerializeField] EnemySpawner lakeSpawner;
     [SerializeField] EnemySpawner fieldSpawner;
+    [SerializeField] EnemySpawner caveSpawner;
 
     string location = LocationTracker.Instance.PlayerLocation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,6 +17,10 @@ public class EncounterDecider : MonoBehaviour
         else if (location == "Field")
         {
             Instantiate (fieldSpawner, transform);
+        }
+        else if (location == "Cave")
+        {
+            Instantiate(caveSpawner, transform);
         }
     }
 

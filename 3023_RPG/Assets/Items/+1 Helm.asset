@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 989f686406446144c8cfd75e4affdc11, type: 3}
-  m_Name: MediumPotion
+  m_Name: +1 Helm
   m_EditorClassIdentifier: 
-  icon: {fileID: 2594068508085724225, guid: 5195bcb6204652340b77a77c3a741883, type: 3}
-  worth: 75
-  description: Heals for a medium amount of HP upon use. You sell it for 75 gold.
+  icon: {fileID: -6876449859285394341, guid: 5195bcb6204652340b77a77c3a741883, type: 3}
+  worth: 500
+  description: A helmet enchanted to further increase its wearer's defense. you sell
+    it for 500 gold.

@@ -357,7 +357,6 @@ RectTransform:
   - {fileID: 1611579726}
   - {fileID: 860485021}
   - {fileID: 1619266607}
-  - {fileID: 1483525608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1531,11 +1530,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1483525608 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-  m_PrefabInstance: {fileID: 209871870752906701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491444582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lakeSpawner: {fileID: 5603198747735429797, guid: 212bdafd08278d94480913aabe21fcb0, type: 3}
   fieldSpawner: {fileID: 4442728653925582047, guid: 810ccf1ae67849f488b326f29bb32c73, type: 3}
+  caveSpawner: {fileID: 4710193075210851962, guid: 59d19c4785a62514bbac9fea7a8c06db, type: 3}
 --- !u!1 &1791414550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,63 +2193,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082803457}
   m_CullTransparentMesh: 1
---- !u!1001 &209871870752906701
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 296796385}
-    m_Modifications:
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 165
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9719.999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2302772641664962937, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6674016319347462089, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
-      propertyPath: m_Name
-      value: Dee Twenty
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b4ab68970d28d4d47b5b418bf7e8f501, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

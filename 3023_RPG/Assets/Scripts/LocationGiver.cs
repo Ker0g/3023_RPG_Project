@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LocationGiver : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class LocationGiver : MonoBehaviour
     void Start()
     {
         LocationTracker.Instance.ChangeLocation(location);
+
+        LocationTracker.Instance.SaveLocationIndex(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

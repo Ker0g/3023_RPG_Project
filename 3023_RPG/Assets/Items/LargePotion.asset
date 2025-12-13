@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: LargePotion
   m_EditorClassIdentifier: 
   icon: {fileID: 6510515419312912815, guid: 5195bcb6204652340b77a77c3a741883, type: 3}
-  description: Heals a large amount of HP on use. (2d12 + 6)
+  worth: 180
+  description: Heals a large amount of HP on use. You sell it for 180 gold

@@ -46,7 +46,7 @@ public class ItemPickup : MonoBehaviour
                 itemPopup.itemToPop = item;
                 itemPopup.PopUp();
 
-
+                GoldManager.instance.AddGold(item.worth);
                 Debug.Log(item.description);
                 Destroy(gameObject);
             }
